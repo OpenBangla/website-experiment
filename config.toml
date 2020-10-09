@@ -39,6 +39,7 @@ dateFormat = "January 2, 2006"
 
 home = "Home"
 logo = "images/48.png"
+description = "An open source, Unicode compliant, Bangla input method for GNU/Linux systems. It’s a full-fledged Bangla input method with many famous typing methods and typing automation tools."
 default = "images/blog/default.png"
 menufixed = false
 
