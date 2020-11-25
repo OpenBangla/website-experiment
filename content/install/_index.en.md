@@ -11,20 +11,24 @@ First set up our repositories for your distro, then you can install normally wit
 
 ## Ubuntu & derivatives
 Run these commands to set up our repository:
+
+**Note: Don't forget to run `source /etc/os-release`, otherwise the installation will fail.**
 ```bash
 source /etc/os-release
-sudo sh -c "curl https://dl.bintray.com/openbangla/i/pub.key | apt-key add -"
-sudo sh -c "curl https://dl.bintray.com/openbangla/i/ubuntu.conf | sed s/@NAME@/$UBUNTU_CODENAME/ > /etc/apt/sources.list.d/openbangla.list"
+sudo sh -c "wget https://dl.bintray.com/openbangla/i/pub.key -q -O - | apt-key add -"
+sudo sh -c "wget https://dl.bintray.com/openbangla/i/ubuntu.conf -q -O - | sed s/@NAME@/$UBUNTU_CODENAME/ > /etc/apt/sources.list.d/openbangla.list"
 sudo apt update
 sudo apt install openbangla-keyboard
 ```
 
 ## Debian
 Run these commands to set up our repository:
+
+**Note: Don't forget to run `source /etc/os-release`, otherwise the installation will fail.**
 ```bash
 source /etc/os-release
-sudo sh -c "curl https://dl.bintray.com/openbangla/i/pub.key | apt-key add -"
-sudo sh -c "curl https://dl.bintray.com/openbangla/i/debian.conf | sed s/@NAME@/$VERSION_CODENAME/ > /etc/apt/sources.list.d/openbangla.list"
+sudo sh -c "wget https://dl.bintray.com/openbangla/i/pub.key -q -O - | apt-key add -"
+sudo sh -c "wget https://dl.bintray.com/openbangla/i/debian.conf  -q -O - | sed s/@NAME@/$VERSION_CODENAME/ > /etc/apt/sources.list.d/openbangla.list"
 sudo apt update
 sudo apt install openbangla-keyboard
 ```
