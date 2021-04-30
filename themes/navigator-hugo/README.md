@@ -1,9 +1,9 @@
 <div align="center">
 <h1><a href="https://themefisher.com/hugo-themes/">Navigator Hugo</a></h1>
-[![GitHub stars](https://img.shields.io/github/stars/themefisher/navigator-hugo.svg)](https://github.com/themefisher/navigator-hugo/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/themefisher/navigator-hugo.svg)](https://github.com/themefisher/navigator-hugo/issues) 
-[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themefisher/navigator-hugo.svg?maxAge=2592000)]() 
-[![GitHub forks](https://img.shields.io/github/forks/themefisher/navigator-hugo.svg)](https://github.com/themefisher/navigator-hugo/network)
+[![GitHub stars](https://img.shields.io/github/stars/themefisher/navigator-hugo.svg)](https://github.com/themefisher/navigator-hugo/stargazers) <br>
+[![GitHub issues](https://img.shields.io/github/issues/themefisher/navigator-hugo.svg)](https://github.com/themefisher/navigator-hugo/issues) <br>
+[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themefisher/navigator-hugo.svg?maxAge=2592000)]() <br>
+[![GitHub forks](https://img.shields.io/github/forks/themefisher/navigator-hugo.svg)](https://github.com/themefisher/navigator-hugo/network)<br>
 <img src="https://user-images.githubusercontent.com/37659754/54080047-38a01b80-4312-11e9-8aa2-1e716c07c0f2.gif" alt="screenshot" width="100%">
 </div>
 
