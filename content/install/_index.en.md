@@ -37,7 +37,7 @@ git clone https://aur.archlinux.org/openbangla-keyboard.git
 cd openbangla-keyboard
 makepkg -risc
 ```
-We also provide a `.pkg.tar.zst` package for Arch Linux which you can easily install by following any of the above instruction for `openbangla-keyboard-bin`. If you want to install it manually, download the installation package from [releases page](https://github.com/OpenBangla/OpenBangla-Keyboard/releases) and install OpenBangla Keyboard on your system by running the following command:
+We also provide a `.pkg.tar.zst` package for Arch Linux which you can download the installation package from [releases page](https://github.com/OpenBangla/OpenBangla-Keyboard/releases) and install OpenBangla Keyboard on your system by running the following command:
 ```bash
 $ sudo pacman -U package.pkg.tar.xz
 ```
