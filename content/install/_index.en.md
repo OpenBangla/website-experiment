@@ -1,54 +1,45 @@
 ---
 title: "Install OpenBangla Keyboard"
-date: 2020-09-23+06:00
+date: 2021-05-01+06:00
 draft: false
 description: "Install OpenBangla Keyboard"
 ---
 
 **If you had installed OpenBangla Keyboard 1.5.1 or earlier version, [please uninstall it first.](https://github.com/OpenBangla/OpenBangla-Keyboard/wiki/Uninstalling-OpenBangla-Keyboard)**
 
-First set up our repositories for your distro, then you can install normally with your package manager.
 
-## Ubuntu & derivatives
-Run these commands to set up our repository:
-
-**Note: Don't forget to run `source /etc/os-release`, otherwise the installation will fail.**
+#### Ubuntu, Fedora and their derivatives
+Open your terminal and run this command on your bash shell. NB : It has to be **BASH**, otherwise it won't work.
 ```bash
-source /etc/os-release
-sudo sh -c "wget https://dl.bintray.com/openbangla/i/pub.key -q -O - | apt-key add -"
-sudo sh -c "wget https://dl.bintray.com/openbangla/i/ubuntu.conf -q -O - | sed s/@NAME@/$UBUNTU_CODENAME/ > /etc/apt/sources.list.d/openbangla.list"
-sudo apt update
-sudo apt install openbangla-keyboard
+bash -c "$(wget -q https://raw.githubusercontent.com/OpenBangla/OpenBangla-Keyboard/master/tools/install.sh -O -)"
 ```
 
-## Debian
-Run these commands to set up our repository:
+If this does not workout for you please create an [Issue](https://github.com/OpenBangla/OpenBangla-Keyboard/issues). While we look into the problem you can check the [Wiki](https://github.com/OpenBangla/OpenBangla-Keyboard/wiki/Installing-OpenBangla-Keyboard) for Distrowise/Distro-specific Install Instructions.
 
-**Note: Don't forget to run `source /etc/os-release`, otherwise the installation will fail.**
+#### Archlinux and it's derivatives
+There are two packages for OpenBangla Keyboard in the Arch User Repository(AUR). Use `openbangla-keyboard` if you want to make and install the package from source. Otherwise, use `openbangla-keyboard-bin` to use the binary package released for Arch and its derivatives by the maintainer. You can install it in one command with your favorite aur helper. Example commands for some popular tools:
+
+##### `openbangla-keyboard`
+* `$ pacaur -S openbangla-keyboard`
+* `$ yay -S openbangla-keyboard`
+* `$ yaourt -S openbangla-keyboard`
+
+
+##### `openbangla-keyboard-bin`
+* `$ pacaur -S openbangla-keyboard-bin`
+* `$ yay -S openbangla-keyboard-bin`
+* `$ yaourt -S openbangla-keyboard-bin`
+
+Or install manually:
 ```bash
-source /etc/os-release
-sudo sh -c "wget https://dl.bintray.com/openbangla/i/pub.key -q -O - | apt-key add -"
-sudo sh -c "wget https://dl.bintray.com/openbangla/i/debian.conf  -q -O - | sed s/@NAME@/$VERSION_CODENAME/ > /etc/apt/sources.list.d/openbangla.list"
-sudo apt update
-sudo apt install openbangla-keyboard
+sudo pacman -S base-devel git
+git clone https://aur.archlinux.org/openbangla-keyboard.git
+cd openbangla-keyboard
+makepkg -risc
 ```
-
-## Fedora
-Run these commands to set up our repository:
+We also provide a `.pkg.tar.zst` package for Arch Linux which you can easily install by following any of the above instruction for `openbangla-keyboard-bin`. If you want to install it manually, download the installation package from [releases page](https://github.com/OpenBangla/OpenBangla-Keyboard/releases) and install OpenBangla Keyboard on your system by running the following command:
 ```bash
-sudo rpm --import https://dl.bintray.com/openbangla/i/pub.key
-sudo sh -c "curl https://dl.bintray.com/openbangla/i/fedora.conf > /etc/yum.repos.d/openbangla.repo"
-sudo dnf install openbangla-keyboard
-```
-
-## Archlinux
-Run these commands to set up our repository:
-```bash
-sudo sh -c "curl https://dl.bintray.com/openbangla/i/pub.key | pacman-key -a -"
-sudo pacman-key --lsign-key "openbanglateam@gmail.com"
-sudo sh -c "curl https://dl.bintray.com/openbangla/i/archlinux.conf >> /etc/pacman.conf"
-sudo pacman -Syy
-sudo pacman -S openbangla-keyboard
+$ sudo pacman -U package.pkg.tar.xz
 ```
 
 ## Others
